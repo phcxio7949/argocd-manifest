@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back
+  labels:
+    app: back                                                                                                                                                          
+spec:
+  replicas: 1                                                                                                                                                               
+  selector:
+    matchLabels:                                                                                                                                                            
+      app: back                                                                                                                                                           
+  template:
+    metadata:                                                                                                                                                               
+      labels:                                                                                                                                                               
+        app: back                                                                                                                                                          
+    spec:
+      containers:                                                                                                                                                           
+      - name: back                                                                                                                                                    
+        image: phcxio7949/project-back:1.0                                                                                                                                         
+        ports:                                                                                                                                                              
+        - containerPort: 3000                                                                                                                                               
+      - name: db                                                                                                                                                          
+        image: mongo
