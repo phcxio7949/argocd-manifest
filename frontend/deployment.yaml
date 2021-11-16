@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: front
-        image: phcxio7949/project-back:1.0
+        image: phcxio7949/project-front:1.0
         ports:
         - containerPort: 80
