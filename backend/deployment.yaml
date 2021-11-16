@@ -15,7 +15,6 @@ spec:
       containers:                                                                                                                                                           
       - name: back                                                                                                                                                    
         image: phcxio7949/project-back:1.0
-        command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
         ports:                                                                                                                                                              
         - containerPort: 3000                                                                                                                                               
       - name: db                                                                                                                                                          
