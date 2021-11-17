@@ -15,10 +15,5 @@ spec:
       containers:
       - name: front
         image: phcxio7949/project-front:1.0
-        env:
-          - name: PROTOCOL
-            value: "https"
-          - name: REACT_APP_API_SERVER_URL
-            value: "$(PROTOCOL)://$(BACK_SERVICE_HOST):$(BACK_SERVICE_PORT)"
         ports:
         - containerPort: 80
